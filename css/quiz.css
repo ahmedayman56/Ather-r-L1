@@ -1,9 +1,8 @@
 :root {
-  --green: #2e7d32;
-  --green-dark: #1b5e20;
-  --green-glow: rgba(46, 125, 50, 0.6);
+  --green: #4FC3F7;
+  --green-dark: #0288D1;
+  --green-glow: rgba(79, 195, 247, 0.5);
 }
-
 * {
   box-sizing: border-box;
 }
@@ -35,9 +34,8 @@ header {
 }
 
 body.dark header {
-  color: #4caf50;
+  color: #81D4FA;
 }
-
 /* زرار الدارك مود */
 #mode {
   width: 42px;
@@ -72,11 +70,11 @@ body.dark header {
 body.dark #mode {
   background: linear-gradient(
     145deg,
-    rgba(76, 175, 80, 0.35),
-    rgba(76, 175, 80, 0.1)
+    rgba(129, 212, 250, 0.35),
+    rgba(129, 212, 250, 0.1)
   );
   color: #ffffff;
-  box-shadow: 0 0 15px rgba(76, 175, 80, 0.35);
+  box-shadow: 0 0 15px rgba(129, 212, 250, 0.35);
 }
 /* NAVIGATION */
 .nav-grid {
@@ -161,8 +159,7 @@ body.dark .option {
   padding-left: 16px;
 }
 .question-text {
-  position: relative;
-  background: rgba(46,125,50,0.08);
+  background: rgba(79, 195, 247, 0.08);
   padding: 14px 14px 14px 18px;
   border-radius: 14px;
   margin-bottom: 18px;
@@ -294,16 +291,15 @@ max-width: 480px;
   margin: 16px;
 
   box-shadow:
-    0 0 0 1px rgba(46, 125, 50, 0.15),
-    0 0 25px rgba(46, 125, 50, 0.25);
-
+    0 0 0 1px rgba(79, 195, 247, 0.20),
+    0 0 25px rgba(79, 195, 247, 0.35);
  animation:fadeIn 0.35s ease;
 }
 body.dark .question-card {
   background: #1e1e1e;
   box-shadow:
-    0 0 0 1px rgba(76, 175, 80, 0.2),
-    0 0 25px rgba(76, 175, 80, 0.35);
+    0 0 0 1px rgba(129, 212, 250, 0.2),
+    0 0 25px rgba(129, 212, 250, 0.35);
 }
 div:empty {
   display: none;
@@ -313,10 +309,9 @@ body.dark .option {
   font-weight: 500;
 }
 body.dark .option.correct {
-  background: rgba(76, 175, 80, 0.35);
+  background: rgba(79, 195, 247, 0.35);
   color: #ffffff;
 }
-
 body.dark .option.wrong {
   background: rgba(244, 67, 54, 0.35);
   color: #ffffff;

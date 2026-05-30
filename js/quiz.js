@@ -22,25 +22,24 @@ function prepareShuffle() {
     }
   });
 }
-const params = new URLSearchParams(window.location.search);
-const subject = params.get("subject");
-const lecture = params.get("lecture");
-
-if (!subject || !lecture) {
-  alert("Subject or lecture missing");
-} else {
-  fetch(`data/${subject}/${lecture}.json`)
-    .then(res => res.json())
-    .then(data => {
-      questions = data;
-      prepareShuffle();
-      renderQuestionNumbers();
-      show();
-    })
-    .catch(err => {
-      console.error("Error loading questions:", err);
-    });
-}
+fetch("../research.json")
+  .then(res => {
+    console.log("STATUS =", res.status);
+    return res.text();
+  })
+  .then(data => {
+    console.log(data);
+    
+    questions = JSON.parse(data);
+    
+    prepareShuffle();
+    renderQuestionNumbers();
+    show();
+  })
+  .catch(err => {
+    console.error(err);
+    alert(err.message);
+  });
 /* ===== عرض السؤال ===== */
 
 function show() {
