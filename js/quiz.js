@@ -23,16 +23,17 @@ function prepareShuffle() {
   });
 }
 fetch("./research.json")
-  .then(res => res.json())
+  .then(response => response.json())
   .then(data => {
-      questions = data;
-      prepareShuffle();
-      renderQuestionNumbers();
-      show();
+    questions = data;
+
+    prepareShuffle();
+    renderQuestionNumbers();
+    show();
   })
-  .catch(err => {
-      console.error(err);
-      alert(err.message);
+  .catch(error => {
+    console.error(error);
+    alert(error.message);
   });
 /* ===== عرض السؤال ===== */
 
