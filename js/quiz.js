@@ -22,23 +22,17 @@ function prepareShuffle() {
     }
   });
 }
-fetch("../research.json")
-  .then(res => {
-    console.log("STATUS =", res.status);
-    return res.text();
-  })
+fetch("./research.json")
+  .then(res => res.json())
   .then(data => {
-    console.log(data);
-    
-    questions = JSON.parse(data);
-    
-    prepareShuffle();
-    renderQuestionNumbers();
-    show();
+      questions = data;
+      prepareShuffle();
+      renderQuestionNumbers();
+      show();
   })
   .catch(err => {
-    console.error(err);
-    alert(err.message);
+      console.error(err);
+      alert(err.message);
   });
 /* ===== عرض السؤال ===== */
 
